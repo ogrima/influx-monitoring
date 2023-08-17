@@ -1,0 +1,33 @@
+version: '3'
+services:
+  grafana: 
+      image: grafana/grafana:latest
+      restart: unless-stopped
+      ports:
+       - 3000:3000
+      environment:
+       - GF_SECURITY_ADMIN_PASSWORD=secret
+      volumes:
+        - grafana:/var/lib/grafana
+      networks:
+      - monitoring
+  influx:
+   image: influxdb:2.7.1
+   restart: unless-stopped
+   ports:
+      - 8086:8086
+   volumes:
+      - influx:/var/lib/influxdb
+   networks:
+      - monitoring
+volumes:
+  influx:
+  grafana:
+networks:
+  monitoring:
+    driver: bridge
+
+  
+
+
+
