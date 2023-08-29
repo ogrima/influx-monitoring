@@ -35,3 +35,7 @@ Update telegraf.conf with the token generated in step before. and run
 > cd .. && cd telegraf-agent
 
 > docker run --network monitoring -v $PWD/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf
+
+## Querying Data
+
+[follow the guide](QueryingData.pdf)
