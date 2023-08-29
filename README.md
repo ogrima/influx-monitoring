@@ -31,3 +31,7 @@ Open influxDB interface in your browser, set organization and bucket.
 
 In this step we will use a docker container with a telegraf agent installed to simulate another computer. This agent will collect and ingest the data in InfluxDB.
 Update telegraf.conf with the token generated in step before. and run
+
+> cd .. && cd telegraf-agent
+
+> docker run --network monitoring -v $PWD/telegraf.conf:/etc/telegraf/telegraf.conf:ro telegraf
