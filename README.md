@@ -39,3 +39,9 @@ Update telegraf.conf with the token generated in step before. and run
 ## Querying Data
 
 [follow the guide](QueryingData.pdf)
+
+## Dashboards
+
+![Grafana Dashboard](img/GrafanaDash.png)
+
+![Influx Dashboard](img/InfluxDash.png)
